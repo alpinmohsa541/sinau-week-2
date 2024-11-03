@@ -1,6 +1,12 @@
 function isPrime(Number){
-    let j = str.length - 1
-    for(let i = 0; i< str.length / 2; i++){
-        
+    if (Number <= 1)
+        return false;
+    for (let i = 2; i <= Math.sqrt(Number); i++){
+        if (Number%i===0){
+            return false;
+        }
     }
+    return true;
 }
+console.log(isPrime(7)); 
+console.log(isPrime(10));
